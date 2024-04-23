@@ -1,19 +1,15 @@
-package org.alava.inventories.model;
+package org.alava.inventories.products.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "Products")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,5 +17,16 @@ public class Product {
     private String name;
     private Double price;
     private Integer amount;
-    private String Description;
+    private String description;
+
+    public Product() {
+    }
+
+    public Product(Long id, String name, Double price, Integer amount, String description) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.amount = amount;
+        this.description = description;
+    }
 }

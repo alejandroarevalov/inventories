@@ -1,11 +1,11 @@
-package org.alava.inventories.mappers;
+package org.alava.inventories.products.mapper;
 
-import org.alava.inventories.dto.ProductDTO;
-import org.alava.inventories.model.Product;
+import org.alava.inventories.products.dto.ProductDTO;
+import org.alava.inventories.products.model.Product;
 
-public class ProductEntityToDTOMapper {
+public class ProductMapper {
 
-    public Product toEntity(ProductDTO productDTO) {
+    public static Product toEntity(ProductDTO productDTO) {
         return new Product(
                 productDTO.Id(),
                 productDTO.name(),
@@ -15,7 +15,7 @@ public class ProductEntityToDTOMapper {
         );
     }
 
-    public ProductDTO toDTO(Product product) {
+    public static ProductDTO toDTO(Product product) {
         return new ProductDTO(
                 product.getId(),
                 product.getName(),

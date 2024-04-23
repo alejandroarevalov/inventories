@@ -1,4 +1,4 @@
-package org.alava.inventories.exceptions;
+package org.alava.inventories.products.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
